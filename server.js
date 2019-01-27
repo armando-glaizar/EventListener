@@ -31,14 +31,10 @@ server.listen(PORT, function() {
 net.createServer(function(sock) {
     console.log("Conectado: " + sock.remoteAddress + ":" + sock.remotePort)
     sock.on('data', function(data) {
-        console.log(data.toString())
+        console.log(data);
     })
     
     sock.on('close', function() {
         console.log("Desconectado: "  + sock.remoteAddress + ":" + sock.remotePort)
-    })
-
-    process.on('uncaughtException', function() {
-        console.log("Bye")
     })
 }).listen(PORT, HOST)
