@@ -17,7 +17,7 @@ for(var k in interfaces) {
     }
 } 
 
-var HOST = process.env.IP || addresses[0]
+var HOST = addresses[0]
 var PORT = process.env.PORT || 8080
 
 io.on('connection', function(socket) {
@@ -36,5 +36,9 @@ net.createServer(function(sock) {
     
     sock.on('close', function() {
         console.log("Desconectado: "  + sock.remoteAddress + ":" + sock.remotePort)
+    })
+
+    process.on('uncaughtException', function() {
+        console.log("Bye")
     })
 }).listen(PORT, HOST)
