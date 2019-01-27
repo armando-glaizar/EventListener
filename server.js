@@ -28,7 +28,7 @@ server.listen(PORT, function() {
     console.log("Servidor Activo: " + PORT)
 })
 
-/*net.createServer(function(sock) {
+net.createServer(function(sock) {
     console.log("Conectado: " + sock.remoteAddress + ":" + sock.remotePort)
     sock.on('data', function(data) {
         console.log(data);
@@ -37,4 +37,4 @@ server.listen(PORT, function() {
     sock.on('close', function() {
         console.log("Desconectado: "  + sock.remoteAddress + ":" + sock.remotePort)
     })
-}).listen(PORT, HOST)*/
+}).listen(PORT, HOST)
