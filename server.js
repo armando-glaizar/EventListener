@@ -17,7 +17,7 @@ for(var k in interfaces) {
     }
 } 
 
-var HOST = addresses[0]*/
+var HOST = addresses[0]
 var PORT = process.env.PORT || 8080
 
 io.on('connection', function(socket) {
