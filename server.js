@@ -17,16 +17,16 @@ for(var k in interfaces) {
     }
 } 
 
-var HOST = addresses[0]
+var HOST = addresses[0]*/
 var PORT = process.env.PORT || 8080
 
 io.on('connection', function(socket) {
     console.log("Conectado: " + socket)
 })
 
-server.listen(PORT, function() {
+/*server.listen(PORT, function() {
     console.log("Servidor Activo: " + PORT)
-})
+})*/
 
 net.createServer(function(sock) {
     console.log("Conectado: " + sock.remoteAddress + ":" + sock.remotePort)
