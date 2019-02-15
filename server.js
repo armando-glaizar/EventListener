@@ -24,9 +24,9 @@ io.on('connection', function(socket) {
     console.log("Conectado: " + socket)
 })
 
-/*server.listen(PORT, function() {
+server.listen(PORT, function() {
     console.log("Servidor Activo: " + PORT)
-})*/
+})
 
 net.createServer(function(sock) {
     console.log("Conectado: " + sock.remoteAddress + ":" + sock.remotePort)
